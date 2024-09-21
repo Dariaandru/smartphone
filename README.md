@@ -19,31 +19,17 @@
 
 <br> <br>
 
-
-</div>
-
-<div style="display: flex; justify-content:space-between; align-items: center">
-
-<p>
-
 Выполнил: <br> <br>
 Студент гр. 9-22, ИСиП: <br>
 Андрущук Д. В.	<br>
 Вариант 2
 
-</p>
-
-<p>
-
 Преподаватель: <br> <br>
 Зеленев П.А. <br>
-
-</p>
 
 </div>
 
 <br> <br> <br>
-
 
 <p align="center">Новосибирск 2024 г</p>
 
