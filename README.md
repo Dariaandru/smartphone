@@ -62,5 +62,85 @@
 | Ввод информации о телефоне без ОС и последущей установки <br> "Samsung", "Galaxi A73", "4,8 GHz", 8, 6, "DDR5", 256, 88897 <br> Установка 25 приложений, которые занимают 100 ГБ и расчет среднего количества приложений | manufactirer:  Samsung <br> model: Galaxi A73 <br>CPU_frequency: 4,8 GHz <br>cores: 8 <br>RAM:   6GB <br>RAM_type:  DDR5 <br>secondary_memory:  256GB <br> OS:    Without OS <br>installed_applications:    25   <br>   occupied_RAM:  100GB <br> Average quantity of applications will be installed:    39 |
 | Удаление всех приложений с этого же телефона | manufactirer:  Samsung <br> model: Galaxi A73 <br> CPU_frequency: 4,8 GHz <br> cores: 8 <br> RAM:   6GB <br> RAM_type:  DDR5 <br> secondary_memory:  256GB <br> OS:    Without OS <br> installed_applications:    0 <br> occupied_RAM:  0GB <br>
 
- 
+# Свойства класса
+
+| Свойство | Тип и ограничения |
+|----------|-------------------|
+|производитель|строка, не пустая|
+|модель |строка, не пустая|
+|частота ЦПстрока, не пустаяУ|строка, не пустая, должно быть число|
+|количество ядер ЦПУ|число больше чем 0|
+|объём оперативной памяти (ОП)|число больше чем 0|
+|тип ОП|строка, не пустая|
+|объём вторичной памяти (ВП)|число больше чем 0|
+|операционная система (ОС)|строка, не пустая, может быть не задано|
+|количество установленных приложений|число не меньше 0, может быть не задано|
+|объём занимаемой приложениями ВП|число не меньше 0, может быть не задано, не может быть 0, если предыдущий показатель не 0|
+|IMEI|число, это цифровой код|
+ 
+# Конструкторы класса
+
+Разроботано 3 конструктора для класса
+
+1. Конструктор со всеми параметрами
+
+```cpp
+Smartphone::Smartphone(string manufactirer, string model, string CPU_frequency, int cores, int RAM,  string RAM_type, int secondary_memory, string OS,  int installed_applications, int occupied_RAM, int IMEI)
+{
+    this->manufactirer = manufactirer;
+    this->model = model;
+    this->CPU_frequency = CPU_frequency;
+    this->cores = cores;
+    this->RAM = RAM;
+    this->RAM_type = RAM_type;
+    this->secondary_memory = secondary_memory;
+    this->OS = OS;
+    this->installed_applications = installed_applications;
+    this->occupied_RAM = occupied_RAM;
+}
+```
+
+2. Конструктор без ОС
+
+```cpp
+Smartphone::Smartphone(string manufactirer, string model, string CPU_frequency, int cores, int RAM,  string RAM_type, int secondary_memory,  int installed_applications, int occupied_RAM, int IMEI)
+{
+    this->manufactirer = manufactirer;
+    this->model = model;
+    this->CPU_frequency = CPU_frequency;
+    this->cores = cores;
+    this->RAM = RAM;
+    this->RAM_type = RAM_type;
+    this->secondary_memory = secondary_memory;
+    this->OS = "Without OS";
+    this->installed_applications = installed_applications;
+    this->occupied_RAM = occupied_RAM;
+}
+```
+
+
+3. Конструктор без ОС и установленных приложений
+
+```cpp
+Smartphone::Smartphone(string manufactirer, string model, string CPU_frequency, int cores, int RAM,  string RAM_type, int secondary_memory, int IMEI)
+{
+    this->manufactirer = manufactirer;
+    this->model = model;
+    this->CPU_frequency = CPU_frequency;
+    this->cores = cores;
+    this->RAM = RAM;
+    this->RAM_type = RAM_type;
+    this->secondary_memory = secondary_memory;
+    this->OS = "Without OS";
+    this->installed_applications = 0;
+    this->occupied_RAM = 0;
+}
+```
+
+
+ 
+ 
+ 
+ 
+ 
 
